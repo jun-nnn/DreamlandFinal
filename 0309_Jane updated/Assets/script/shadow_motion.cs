@@ -56,4 +56,14 @@ public class shadow_motion : MonoBehaviour {
 	public static void cameraChange(){
 		rotationAdjust = 680;
 	}
+
+	//TO DO : FIXED SHADOW LEEPY COLLISION
+	/*
+	void OnCollisionEnter(Collision c){
+		if (c.gameObject.tag == "leepy") {
+			Physics.IgnoreCollision (this.gameObject.GetComponent<Collider>(), c.gameObject.GetComponents<Collider>());
+		}
+	}
+	*/
+
 }

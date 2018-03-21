@@ -13,20 +13,8 @@ public class leepyBrakeZone : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider col){
 		if (col.CompareTag ("leepy")) {
-			leepyPath.speed = newspeed;
-			leepyPath.start = newstate;
+			//leepyPath.speed = newspeed;
 		}
 	}
 
-	void OnTriggerExit(Collider col){	
-		if (col.CompareTag ("leepy")) {
-			leepyPath.speed = originalspeed;
-			leepyPath.start = newstate;
-		}
-	}
-
-	void Update(){
-		leepyPath.speed = originalspeed;
-		leepyPath.start = true;
-	}
 }

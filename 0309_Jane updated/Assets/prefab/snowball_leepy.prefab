@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 135259162069227264}
   - component: {fileID: 54283928552008996}
   - component: {fileID: 114510062659577242}
+  - component: {fileID: 114250490200087628}
   m_Layer: 0
   m_Name: snowball_leepy
   m_TagString: snowball_pre
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826864028731966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30.324669, y: 2.4269733, z: -25.995508}
+  m_LocalPosition: {x: 41.202732, y: -1.77, z: -21.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +102,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114250490200087628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1826864028731966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d66a3c28244fb6a4db2d58afbc1de98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shadow_empty: {fileID: 0}
+  uhoh: {fileID: 0}
 --- !u!114 &114510062659577242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -113,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  die_script: {fileID: 114250490200087628}
+  respawnPoint: {fileID: 0}
 --- !u!135 &135259162069227264
 SphereCollider:
   m_ObjectHideFlags: 1

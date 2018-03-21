@@ -11,9 +11,9 @@ public class leepyPath : MonoBehaviour {
 	public GameObject[] wayPoints;
 	private int currentWayPoint = 0;
 	private float rotationspeed = 0.2f;
-	public static float speed = 3.0f;
+	public static float speed = 0.0f;
 	private float WayPointAccracy = 1f;
-	public static bool start = true;
+	public static bool start = false;
 
 	// Use this for initialization
 	void Start () {
@@ -24,6 +24,7 @@ public class leepyPath : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (start) {
+			Debug.Log("leepy has been trigger and starts walking");
 			if (state == "patrol" && wayPoints.Length > 0) {
 				anim.SetBool ("isWalking", true);
 				anim.SetBool ("isIdle", false);
@@ -48,7 +49,10 @@ public class leepyPath : MonoBehaviour {
 		else {
 			anim.SetBool ("isWalking", false);
 			anim.SetBool ("isIdle", true);
-			
 		}
 	}
+
+
+		
 }
+

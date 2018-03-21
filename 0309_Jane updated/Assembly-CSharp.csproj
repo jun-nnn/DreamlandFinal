@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Menu Scene\2script\Cameras.cs" />
+     <Compile Include="Assets\Menu Scene\2script\game_over.cs" />
      <Compile Include="Assets\Menu Scene\2script\movetoday.cs" />
      <Compile Include="Assets\Menu Scene\2script\movetonight.cs" />
      <Compile Include="Assets\Menu Scene\2script\restartGame.cs" />
@@ -114,17 +115,26 @@
      <Compile Include="Assets\Pixelplacement\Surge\Utilities\Initialization.cs" />
      <Compile Include="Assets\Pixelplacement\Surge\Utilities\Math.cs" />
      <Compile Include="Assets\script\break_rock.cs" />
+     <Compile Include="Assets\script\buggy_leppy.cs" />
      <Compile Include="Assets\script\buttonPush.cs" />
+     <Compile Include="Assets\script\caibin_trigger.cs" />
      <Compile Include="Assets\script\camera_switch.cs" />
      <Compile Include="Assets\script\elevator.cs" />
+     <Compile Include="Assets\script\elevator_brake.cs" />
+     <Compile Include="Assets\script\elevator_trigger.cs" />
      <Compile Include="Assets\script\elevator2.cs" />
+     <Compile Include="Assets\script\elevator3.cs" />
+     <Compile Include="Assets\script\EmptyClass.cs" />
      <Compile Include="Assets\script\game_logic.cs" />
+     <Compile Include="Assets\script\game_over_finally.cs" />
      <Compile Include="Assets\script\iceAvoidColliders.cs" />
      <Compile Include="Assets\script\killerRockStable.cs" />
+     <Compile Include="Assets\script\leepy_controller.cs" />
      <Compile Include="Assets\script\leepyBrakeZone.cs" />
      <Compile Include="Assets\script\leepyPath.cs" />
      <Compile Include="Assets\script\LeepyTrampoline.cs" />
      <Compile Include="Assets\script\leepyWalkingPath.cs" />
+     <Compile Include="Assets\script\nob_trigger.cs" />
      <Compile Include="Assets\script\respawn.cs" />
      <Compile Include="Assets\script\shadow.cs" />
      <Compile Include="Assets\script\shadow_motion.cs" />

@@ -13,7 +13,7 @@ public class LeepyTrampoline : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.deltaTime-starttime < 10) {
-			transform.Translate(0,Time.deltaTime*6,0);
+			transform.Translate(0,Time.deltaTime,0);
 		}	
 	}
 
