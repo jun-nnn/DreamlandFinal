@@ -3,6 +3,7 @@ using System.Collections;
 
 public class snowman_script : MonoBehaviour {
 	public AudioClip sink;
+	private AudioSource snowman_audio;
 	public GameObject rock_breakages;
 	private Vector3 currPos;
 	private Vector3 currRot;
@@ -12,11 +13,12 @@ public class snowman_script : MonoBehaviour {
 	bool should_sink;
 
 	void Start(){
-		GetComponent<AudioSource>().playOnAwake = false;
-		GetComponent<AudioSource> ().clip = sink;
+
+		//GetComponent<AudioSource> ().clip = sink;
 		should_sink = false;
 		currPos = transform.position;
 		currRot = transform.eulerAngles;
+		snowman_audio = GetComponent<AudioSource> ();
 	}
 
 	void Update() {
@@ -24,11 +26,13 @@ public class snowman_script : MonoBehaviour {
 			Debug.Log ("Snowman should stop sinking");
 			should_sink = false;
 			gameObject.GetComponent<Animator> ().enabled = false;
+		
 			return;
 		}
 		if (should_sink) {
 			Debug.Log ("Snowman sinking");
-			GetComponent<AudioSource>().PlayOneShot (sink, 0.05f);
+			//shadow_audio = GetComponent<AudioSource> ();
+			snowman_audio.PlayOneShot (sink, 0.05f);
 			time += Time.deltaTime / 0.5f; //sink for 5 seconds
 			currPos = Vector3.Lerp (currPos, targetPos, time);
 			currRot = new Vector3 (

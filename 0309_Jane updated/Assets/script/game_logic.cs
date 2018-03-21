@@ -5,6 +5,7 @@ using UnityEngine;
 public class game_logic : MonoBehaviour {
 	public GameObject player,life1, life2, life3, gameOver, restartButton;
 	public static int life_count;
+
 	//public Button restartButton;
 
 	// Use this for initialization
@@ -16,6 +17,7 @@ public class game_logic : MonoBehaviour {
 		player.gameObject.SetActive (true);
 		gameOver.gameObject.SetActive (false);
 		restartButton.gameObject.SetActive (false);
+
 	}
 	
 	// Update is called once per frame

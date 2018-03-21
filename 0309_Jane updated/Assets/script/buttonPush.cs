@@ -34,7 +34,7 @@ public class buttonPush : MonoBehaviour {
 		if (col.collider.name == "shadowEmpty" ){//|| col.collider.name == "shadowEmpty") {
 			//anim.SetBool("stop", true);
 			rotCount += 1;
-			button_audio.PlayOneShot (caveRot, 1f);
+			button_audio.PlayOneShot (caveRot, 2.5f);
 		}
 	}
 }
