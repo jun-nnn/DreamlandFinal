@@ -31,7 +31,7 @@ public class buttonPush : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		if (col.collider.name == "shadowEmpty" ){//|| col.collider.name == "shadowEmpty") {
+		if (col.collider.gameObject.tag == "Player" ){//|| col.collider.name == "shadowEmpty") {
 			//anim.SetBool("stop", true);
 			rotCount += 1;
 			button_audio.PlayOneShot (caveRot, 2.5f);

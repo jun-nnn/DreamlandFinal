@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\leepy_death_script.cs" />
      <Compile Include="Assets\Menu Scene\2script\Cameras.cs" />
      <Compile Include="Assets\Menu Scene\2script\game_over.cs" />
      <Compile Include="Assets\Menu Scene\2script\movetoday.cs" />

@@ -15,6 +15,7 @@ TagManager:
   - elevator
   - elevator_trigger
   - elevator_to_cabin
+  - snowball
   layers:
   - Default
   - TransparentFX

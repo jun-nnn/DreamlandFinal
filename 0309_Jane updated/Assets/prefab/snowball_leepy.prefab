@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 114250490200087628}
   m_Layer: 0
   m_Name: snowball_leepy
-  m_TagString: snowball_pre
+  m_TagString: snowball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,8 +127,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  die_script: {fileID: 114250490200087628}
-  respawnPoint: {fileID: 0}
 --- !u!135 &135259162069227264
 SphereCollider:
   m_ObjectHideFlags: 1

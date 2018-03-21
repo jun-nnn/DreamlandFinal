@@ -7,7 +7,7 @@ public class snowman_script : MonoBehaviour {
 	public GameObject rock_breakages;
 	private Vector3 currPos;
 	private Vector3 currRot;
-	private Vector3 targetPos = new Vector3(29.75395f, -0.4431741f, -16.65116f);
+	private Vector3 targetPos = new Vector3(30.6f, -0.3331741f, -15.9f);
 	private Vector3 targetRot = new Vector3(17.757f, 29.842f, 1.548f);
 	float time = 0;
 	bool should_sink;
