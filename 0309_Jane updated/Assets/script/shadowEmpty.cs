@@ -49,10 +49,10 @@ public class shadowEmpty : MonoBehaviour {
 		} else if (onTrampoline >= 1 && onTrampoline <= 20) {
 			verticalVelocity = trampolineVel;
 			onTrampoline += 1;
-		} else if (downWell >= 1 && downWell <= 200) {
+		} else if (downWell >= 1 && downWell <= 150) {
 			verticalVelocity = downWellVel;
 			downWell += 1;
-		} else if (upWell >= 1 && upWell <= 250) {
+		} else if (upWell >= 1 && upWell <= 50) {
 			verticalVelocity = upWellVel;
 			upWell += 1;
 		}
@@ -88,16 +88,16 @@ public class shadowEmpty : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.A)) {
 			cameraSwitched = true;
 		}
-		if (cameraSwitchCount >= 1 && cameraSwitchCount < 100) {
+		if (cameraSwitchCount >= 1 && cameraSwitchCount < 150) {
 			cameraSwitchCount += 1;
 		}
-		if (cameraSwitchCount == 100) {
+		if (cameraSwitchCount == 150) {
 			cameraSwitched = true;
 			upWell = 1;
-			shadow_audio.PlayOneShot (upWell_audio, 1.0f);
+			//shadow_audio.PlayOneShot (upWell_audio, 1.0f);
 			cameraSwitchCount += 1;
 		}
-		if (cameraSwitchCount == 101) {
+		if (cameraSwitchCount == 151) {
 			transform.position = well2.transform.position;
 			cameraSwitchCount += 1;
 		}

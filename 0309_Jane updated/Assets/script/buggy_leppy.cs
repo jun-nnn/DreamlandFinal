@@ -18,7 +18,7 @@ public class buggy_leppy : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		state = "patrol";
-		anim = gameObject.GetComponent<Animator>();
+		anim = gameObject.transform.GetChild (0).GetComponent<Animator>();
 	}
 
 	// Update is called once per frame

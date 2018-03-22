@@ -16,6 +16,7 @@ public class game_logic : MonoBehaviour {
 		life3.gameObject.SetActive (true);
 		player.gameObject.SetActive (true);
 		gameOver.gameObject.SetActive (false);
+		//youwin.gameObject.SetActive (false);
 		restartButton.gameObject.SetActive (false);
 
 	}
@@ -52,5 +53,6 @@ public class game_logic : MonoBehaviour {
 			restartButton.gameObject.SetActive (true);
 			break;
 		}
+			
 	}
 }

@@ -7,7 +7,7 @@ public class snowman_script : MonoBehaviour {
 	public GameObject rock_breakages;
 	private Vector3 currPos;
 	private Vector3 currRot;
-	private Vector3 targetPos = new Vector3(30.6f, -0.3331741f, -15.9f);
+	private Vector3 targetPos = new Vector3(32.14f, -0.3331741f, -16.75f);
 	private Vector3 targetRot = new Vector3(17.757f, 29.842f, 1.548f);
 	float time = 0;
 	bool should_sink;
@@ -26,7 +26,6 @@ public class snowman_script : MonoBehaviour {
 			Debug.Log ("Snowman should stop sinking");
 			should_sink = false;
 			gameObject.GetComponent<Animator> ().enabled = false;
-		
 			return;
 		}
 		if (should_sink) {

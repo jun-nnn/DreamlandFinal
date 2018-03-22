@@ -6,7 +6,7 @@ public class startAttack : MonoBehaviour {
 	public snowman_static_attack attack_script;
 
 	void OnTriggerEnter(Collider other){
-		if (other.gameObject.name == "shadow_rigged") {
+		if (other.gameObject.name == "Player") {
 			attack_script.startLeepyAttack ();
 		}
 	}

@@ -66,3 +66,5 @@ C:\Users\Admin\Documents\GitHub\Dreamland-3-17-update\0309_Jane updated\Temp\bin
 C:\Users\Admin\Documents\GitHub\Dreamland-3-17-update\0309_Jane updated\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Documents\GitHub\Dreamland-3-17-update\0309_Jane updated\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Admin\Documents\GitHub\Dreamland-3-17-update\0309_Jane updated\obj\Debug\Assembly-CSharp-firstpass.pdb
+F:\CS248\Ice _World_Emma\DreamlandFinal\0309_Jane updated\obj\Debug\Assembly-CSharp-firstpass.dll
+F:\CS248\Ice _World_Emma\DreamlandFinal\0309_Jane updated\obj\Debug\Assembly-CSharp-firstpass.pdb

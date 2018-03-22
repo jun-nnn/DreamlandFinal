@@ -1,4 +1,3 @@
-﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,10 +8,9 @@ public class snowman_shooting_leepy : MonoBehaviour {
 	private Transform player; 
 	private Vector3 target;
 
-
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("leepy_head").transform;
-		target = new Vector3(player.position.x, player.position.y, player.position.z);
+		player = GameObject.FindGameObjectWithTag("leepy").transform;
+		target = new Vector3(player.position.x, player.position.y + 1f, player.position.z);
 	}
 
 	// Update is called once per frame
@@ -23,7 +21,12 @@ public class snowman_shooting_leepy : MonoBehaviour {
 		}
 	}
 
-
+	void OnCollisionEnter(Collision other){
+		if (other.gameObject.tag == "leepy") {
+			DestroyProjectile();
+			Debug.Log ("snowball hit leepy");
+		}
+	}
 
 	void DestroyProjectile(){
 		Destroy(gameObject);

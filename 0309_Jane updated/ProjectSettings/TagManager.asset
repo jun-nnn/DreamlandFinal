@@ -16,6 +16,9 @@ TagManager:
   - elevator_trigger
   - elevator_to_cabin
   - snowball
+  - leepy2
+  - cabin
+  - leepy3
   layers:
   - Default
   - TransparentFX
@@ -26,7 +29,7 @@ TagManager:
   - 
   - 
   - trigger
-  - 
+  - leepy
   - 
   - 
   - 

@@ -10,7 +10,8 @@ public class snowman_static_attack : MonoBehaviour {
 	public float lookingDistance;
 	public float rotaiondamping;
 	public Transform player;
-	bool start_leepy_attack;
+	public Transform enemies;
+	public bool start_leepy_attack;
 
 	public void startLeepyAttack(){
 		start_leepy_attack = true;
@@ -22,20 +23,21 @@ public class snowman_static_attack : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag("leepy_head").transform;
+		player = GameObject.FindGameObjectWithTag("leepy").transform;
 		timeBtwShots = startTimeBtwShot;
 		start_leepy_attack = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		if (Vector3.Distance(transform.position, player.position) < lookingDistance){
+		
+		if (Vector3.Distance(enemies.position, player.position) < lookingDistance){
 			lookAtPlayer();
 		}
 		if (start_leepy_attack) {
 			if (timeBtwShots <= 0) {
-				Instantiate (projectile, transform.position, transform.rotation);
+				Debug.Log ("start shooting");
+				Instantiate (projectile, enemies.position, enemies.rotation);
 				timeBtwShots = startTimeBtwShot;
 			} else {
 				timeBtwShots -= Time.deltaTime;
@@ -45,8 +47,7 @@ public class snowman_static_attack : MonoBehaviour {
 	}
 		
 	void lookAtPlayer(){
-		
-		Quaternion rotation = Quaternion.LookRotation(player.position - transform.position);
-		transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotaiondamping);
+		Quaternion rotation = Quaternion.LookRotation(player.position - enemies.position);
+		transform.rotation = Quaternion.Slerp(enemies.rotation, rotation, Time.deltaTime * rotaiondamping);
 	}
 }
