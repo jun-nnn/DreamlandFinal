@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - snowball_pre
+  - snowball
+  - leepy
+  - killer_rock_breakage
+  - leepy_head
+  - killer_rock
+  - leepy3
+  - leepy2
+  - ice0
+  - ice1
+  - ice2
+  - ice3
+  - ice4
+  - walk_to_trunk
+  - rock_breakages
+  - trampoline
+  - cave_snowmen
+  - icewall
+  - icewall_trigger
+  - snowman_on_roof
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - leepy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
