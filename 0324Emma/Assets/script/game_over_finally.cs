@@ -29,7 +29,7 @@ public class game_over_finally : MonoBehaviour {
 
 			Debug.Log("output you win");
 			anim.SetTrigger ("dance");
-			//			cam.GetComponent<AudioSource> ().pause ();
+			cam.GetComponent<AudioSource> ().Pause ();
 			shadow_dance.PlayOneShot(Win,1F);
 		}
 	}
