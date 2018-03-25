@@ -30,7 +30,6 @@ public class snowman_attack_trigger : MonoBehaviour {
 			xiaodouDeath.instant_respawn = false;
 			xiaodouDeath.isicelayer = false;
 			level_triggered = true;
-			gameObject.SetActive (false);
 			nextlevel.SetActive (true);
 		}
 	}

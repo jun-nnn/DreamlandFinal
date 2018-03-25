@@ -40,7 +40,6 @@ public class pass_river_trigger : MonoBehaviour {
 		}
 		gameObject.SetActive (false);
 		next_level.SetActive (true);
-
 	}
 	
 		//StopCoroutine ("Enter new challenge");}
@@ -55,4 +54,5 @@ public class pass_river_trigger : MonoBehaviour {
 			level_triggered = true;
 		}
 	}
+
 }
