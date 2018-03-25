@@ -9,7 +9,7 @@ public class snowman_script : MonoBehaviour {
 	private Vector3 targetPos = new Vector3(31.83f, -0.3331741f, -22.53f);
 	private Vector3 targetRot = new Vector3(17.757f, 29.842f, 1.548f);
 	private GameObject icewall;
-	private AudioSource icewallPop;
+	//private AudioSource icewallPop;
 	private AudioSource stone;
 	private GameObject rock_breakages;
 
@@ -30,7 +30,7 @@ public class snowman_script : MonoBehaviour {
 		Debug.Log ("snowman_script starts");
 		icewall = GameObject.FindGameObjectWithTag ("icewall");
 		icewall.SetActive (false);
-		icewallPop = GetComponent<AudioSource> ();
+		//icewallPop = GetComponent<AudioSource> ();
 		rock_breakages =  GameObject.FindGameObjectWithTag ("killer_rock_breakage");
 		rock_breakages.SetActive (false);
 	}
@@ -64,7 +64,7 @@ public class snowman_script : MonoBehaviour {
 
 			rock_breakages.GetComponent<break_rock> ().BreakRock ();
 			stone.PlayOneShot (stone_break, 1f);
-			icewallPop.PlayOneShot (icewall_pop, 1f);
+			//icewallPop.PlayOneShot (icewall_pop, 1f);
 			sbattack.start_leepy_attack = false;
 			should_sink = true;
 			icewall.SetActive (true);
