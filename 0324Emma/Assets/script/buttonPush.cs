@@ -6,44 +6,39 @@ public class buttonPush : MonoBehaviour {
 	public GameObject cave;
 	public AudioClip caveRot;
 	AudioSource button_audio;
-	int rotCount;
-	public bool cave_is_rotate = false;
-	GameObject[] stones ;
+	int rotCount = 0;
+	private float totalRot = 0;
 	//Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		button_audio = GetComponent<AudioSource>();
-		rotCount = 1;
-		Debug.Log ("button_push starts");
-	
 		//anim = GetComponent<Animator>();
 		//anim.SetBool ("stop", false);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-
-		if (cave_is_rotate) {
-			/*if (Input.GetKeyDown (KeyCode.C)) {
-				rotCount = 110;
-			}*/
-			if (rotCount < 250) {
-				cave.transform.Rotate (0, Time.deltaTime * 25, 0);
-				rotCount = rotCount + 1;
-			} else {
-				button_audio.Pause ();
-			}
+		if (Input.GetKeyDown (KeyCode.C)) {
+			rotCount = 240;
+		}
+		if (totalRot <= 110 && rotCount >= 1 && rotCount < 240) {
+			float thisrot = Time.deltaTime * 25;
+			cave.transform.Rotate (0, thisrot, 0);
+			totalRot += thisrot;
+			print(totalRot);
+			rotCount = rotCount + 1;
+		} else {
+			button_audio.Pause();
 		}
 	}
 
 	void OnCollisionEnter(Collision col){
-		stones = GameObject.FindGameObjectsWithTag("killer_rock_breakage");
-		if (col.collider.gameObject.tag == "Player" && stones != null) {//|| col.collider.name == "shadowEmpty") {
+		if (col.collider.gameObject.tag == "Player") {
 			//anim.SetBool("stop", true);
-			cave_is_rotate = true;
-			aiattack.cave_attack = true;
-			button_audio.PlayOneShot (caveRot, 2f);
+			rotCount += 1;
+			button_audio.PlayOneShot (caveRot, 2.5f);
+			shadowCamera.lower();
 		}
 	}
 }

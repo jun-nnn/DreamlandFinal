@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class shadowEmpty : MonoBehaviour {
+	// audioclips
+	public AudioClip jump1;
+	public AudioClip bounce;
+	public AudioClip downWell_audio;
+	public AudioClip oreo_audio;
+
+	// public variables
+	public float spd = 5;
+	public GameObject well1;
+	public GameObject well2;
+
 	// gameobject components
 	private CharacterController controller;
 	private AudioSource shadow_audio;
@@ -23,17 +34,7 @@ public class shadowEmpty : MonoBehaviour {
 	private float verticalVelocity = 0f;
 	private float jump = 0f;
 	private int cameraSwitchCount = 0;
-
-	// audioclips
-	public AudioClip jump1;
-	public AudioClip bounce;
-	public AudioClip downWell_audio;
-	public AudioClip upWell_audio;
-
-	public float spd = 5;
-	public GameObject well1;
-	public GameObject well2;
-	public GameObject snowman;
+	private string lastCollided;
 
 	// Use this for initialization
 	void Start () {
@@ -59,6 +60,11 @@ public class shadowEmpty : MonoBehaviour {
 		}
 		else{
 			verticalVelocity -= gravity * Time.deltaTime;
+		}
+
+		// respawn for platforms
+		if (controller.isGrounded && lastCollided == "platform") {
+			//respawn
 		}
 
 		// moving using keyboard arrows
@@ -95,7 +101,7 @@ public class shadowEmpty : MonoBehaviour {
 		if (cameraSwitchCount == 30) {
 			cameraSwitched = true;
 			upWell = 1;
-			shadow_audio.PlayOneShot (upWell_audio, 1.0f);
+			//shadow_audio.PlayOneShot (upWell_audio, 1.0f);
 			cameraSwitchCount += 1;
 		}
 		if (cameraSwitchCount == 31) {
@@ -107,17 +113,11 @@ public class shadowEmpty : MonoBehaviour {
 			onTrampoline = 1;
 			shadow_audio.PlayOneShot (bounce, 1.0f);
 		}
-		/*if (Input.GetKeyDown (KeyCode.W)) {
-			cameraSwitchCount = 1;
-			downWell = 1;
-			DestroyObject (well1);
-			shadow_audio.PlayOneShot (downWell_audio, 1.0f);
-		}*/
-
 	}
 
 
 	void OnCollisionEnter(Collision col){
+		lastCollided = col.collider.tag;
 		// on trampoline
 		if (col.collider.name == "trampoline") {
 			print ("colliding trampoline");
@@ -130,7 +130,10 @@ public class shadowEmpty : MonoBehaviour {
 			downWell = 1;
 			DestroyObject (col.gameObject);
 			shadow_audio.PlayOneShot (downWell_audio, 1.0f);
-			GameObject.FindGameObjectWithTag("cave_snowmen").SetActive(false);
+		}
+
+		if (col.collider.tag == "oreo") {
+			shadow_audio.PlayOneShot (oreo_audio, 1.0f);
 		}
 	}
 }
