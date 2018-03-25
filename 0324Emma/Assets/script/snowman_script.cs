@@ -11,9 +11,9 @@ public class snowman_script : MonoBehaviour {
 	private GameObject icewall;
 	private AudioSource icewallPop;
 	private AudioSource stone;
+	private GameObject rock_breakages;
 
 	public AudioClip sink;
-	public GameObject rock_breakages;
 	public AudioClip stone_break;
 	public AudioClip icewall_pop;
 
@@ -21,17 +21,18 @@ public class snowman_script : MonoBehaviour {
 	bool should_sink;
 
 	void Start(){
-
 		//GetComponent<AudioSource> ().clip = sink;
 		should_sink = false;
 		currPos = transform.position;
 		currRot = transform.eulerAngles;
-		snowman_audio = GetComponent<AudioSource> ();
+		//snowman_audio = GetComponent<AudioSource> ();
 		stone = GetComponent<AudioSource>();
 		Debug.Log ("snowman_script starts");
 		icewall = GameObject.FindGameObjectWithTag ("icewall");
 		icewall.SetActive (false);
 		icewallPop = GetComponent<AudioSource> ();
+		rock_breakages =  GameObject.FindGameObjectWithTag ("killer_rock_breakage");
+		rock_breakages.SetActive (false);
 	}
 
 	void Update() {
@@ -39,7 +40,6 @@ public class snowman_script : MonoBehaviour {
 			Debug.Log ("Snowman should stop sinking");
 			should_sink = false;
 			gameObject.GetComponent<Animator>().enabled = false;
-		
 			return;
 		}
 		if (should_sink) {

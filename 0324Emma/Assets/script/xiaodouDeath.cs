@@ -25,7 +25,7 @@ public class xiaodouDeath : MonoBehaviour {
 			yield return new WaitForSeconds (1.5f);
 			gameObject.transform.position = respawnPoint.transform.position;
 			shadow_empty.transform.position = respawnPoint.transform.position;
-			if(isicelayer) Application.LoadLevel (Application.loadedLevel);
+			//if(isicelayer) Application.LoadLevel (Application.loadedLevel);
 		} else if (game_logic.life_count == 0) {
 			gameObject.transform.position = respawnPoint.transform.position;
 			shadow_empty.transform.position = respawnPoint.transform.position;

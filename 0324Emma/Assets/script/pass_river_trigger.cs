@@ -5,13 +5,14 @@ using UnityEngine;
 public class pass_river_trigger : MonoBehaviour {
 	
 	public float waitTime;
+	public AudioClip ice_pop;
+	public AudioClip level_pop;
+	public bool level_triggered;
+
 	private GameObject[] ice = new GameObject[5];
 	private GameObject next_level;
-	public AudioClip ice_pop;
-	private AudioSource icePop;
-	public AudioClip level_pop;
 	private AudioSource Level;
-	public bool level_triggered;
+	private AudioSource icePop;
 
 	// Use this for initialization
 	void Start () {
@@ -32,19 +33,19 @@ public class pass_river_trigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	IEnumerator LateCall(){
-		next_level.SetActive (true);
 		for (int i = 4; i >= 0; i--) {
 			icePop.PlayOneShot (ice_pop, 0.6F);
 			ice [i].SetActive (true);
 			yield return new WaitForSeconds (waitTime);
 		}
 		gameObject.SetActive (false);
+		next_level.SetActive (true);
+
 	}
 	
 		//StopCoroutine ("Enter new challenge");}
 
 	void OnCollisionEnter(Collision col){
-		
 		if (!level_triggered && col.gameObject.tag == "Player") {
 			Debug.Log ("pass river trigger");
 			PlayerPrefs.GetInt ("current_scene", Application.loadedLevel);

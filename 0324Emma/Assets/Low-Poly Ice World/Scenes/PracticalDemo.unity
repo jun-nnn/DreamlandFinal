@@ -1701,6 +1701,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 22.841002
       objectReference: {fileID: 0}
+    - target: {fileID: 1117644837955878, guid: 1fd7d88882a8dba4f8779230a300311e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fd7d88882a8dba4f8779230a300311e, type: 2}
   m_IsPrefabParent: 0
@@ -13423,7 +13427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &804315311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14343,7 +14347,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1791061311021716, guid: 7c1a8f34301a54d41b65508aff202eaa, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64415972542959334, guid: 7c1a8f34301a54d41b65508aff202eaa, type: 2}
@@ -19037,7 +19041,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sink: {fileID: 8300000, guid: 9f907715f8b9c407c97ecedf352c18e8, type: 3}
-  rock_breakages: {fileID: 1604884607}
   stone_break: {fileID: 8300000, guid: aadb2ce70024d934b81881a4ff1d196a, type: 3}
   icewall_pop: {fileID: 8300000, guid: 8a6ed81bff7a5fa4bbb3e32d9ad319b7, type: 3}
 --- !u!82 &1190622578
@@ -19761,6 +19764,7 @@ GameObject:
   - component: {fileID: 1232058044}
   - component: {fileID: 1232058039}
   - component: {fileID: 1232058045}
+  - component: {fileID: 1232058046}
   m_Layer: 0
   m_Name: leepy_walk_to_trunk
   m_TagString: walk_to_trunk
@@ -19792,9 +19796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30f63eb15894ab34bb376dc560f7c828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: {fileID: 0}
   level_pop: {fileID: 8300000, guid: b3c1825d1b3bdbf46aee800ec5ae0811, type: 3}
-  level_triggered: 0
 --- !u!65 &1232058040
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19957,6 +19959,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &1232058046
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232058037}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1238708030
 GameObject:
   m_ObjectHideFlags: 0
@@ -22351,7 +22433,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sink: {fileID: 8300000, guid: 9f907715f8b9c407c97ecedf352c18e8, type: 3}
-  rock_breakages: {fileID: 1604884607}
   stone_break: {fileID: 0}
   icewall_pop: {fileID: 0}
 --- !u!114 &1367996894
@@ -24619,7 +24700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1604884608
 Transform:
   m_ObjectHideFlags: 0
@@ -26410,7 +26491,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1791061311021716, guid: 7c1a8f34301a54d41b65508aff202eaa, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 64415972542959334, guid: 7c1a8f34301a54d41b65508aff202eaa, type: 2}

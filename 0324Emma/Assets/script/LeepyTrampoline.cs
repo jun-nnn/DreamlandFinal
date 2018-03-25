@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class LeepyTrampoline : MonoBehaviour {
 	float starttime;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {

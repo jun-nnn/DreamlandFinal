@@ -16,7 +16,7 @@ public class break_rock : MonoBehaviour {
 
 	void SetChildren(bool is_enabled) {
 		Debug.Log ("setting rock children to " +is_enabled);
-		rocks = GameObject.FindGameObjectsWithTag ("killer_rock_breakage");
+		rocks = GameObject.FindGameObjectsWithTag ("rock_breakages");
 		foreach (GameObject stone in rocks) {
 			stone.SetActive (true);
 			Debug.Log ("found the killer rock");
