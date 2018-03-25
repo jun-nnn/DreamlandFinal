@@ -7,10 +7,12 @@ public class elevator3 : MonoBehaviour {
 	public static bool elevator_move = true;
 	public Vector3 target;
 	public float speed = 6.0f;
+	public GameObject cabin;
 
 	// Use this for initialization
 	void Start () {
 		target = new Vector3(51.07f, 25.52f, -67.04f);
+		cabin.SetActive (false);
 	}
 		
 	// Update is called once per frame
@@ -18,7 +20,9 @@ public class elevator3 : MonoBehaviour {
 		
 		if (elevator_move) {
 			transform.position = Vector3.MoveTowards (transform.position, target, speed * Time.deltaTime);
-			
+		}
+		if (transform.position == target) {
+			cabin.SetActive (true);
 		}
 	}
 }

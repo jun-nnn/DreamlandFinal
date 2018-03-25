@@ -125,6 +125,7 @@
      <Compile Include="Assets\script\elevator_trigger.cs" />
      <Compile Include="Assets\script\elevator2.cs" />
      <Compile Include="Assets\script\elevator3.cs" />
+     <Compile Include="Assets\script\fix_bridge.cs" />
      <Compile Include="Assets\script\game_logic.cs" />
      <Compile Include="Assets\script\game_over_finally.cs" />
      <Compile Include="Assets\script\iceAvoidColliders.cs" />

@@ -43,7 +43,7 @@ public class buttonPush : MonoBehaviour {
 			//anim.SetBool("stop", true);
 			cave_is_rotate = true;
 			aiattack.cave_attack = true;
-			button_audio.PlayOneShot (caveRot, 2.5f);
+			button_audio.PlayOneShot (caveRot, 2f);
 		}
 	}
 }

@@ -24,6 +24,7 @@ TagManager:
   - icewall
   - icewall_trigger
   - snowman_on_roof
+  - cabin_trigger
   layers:
   - Default
   - TransparentFX
